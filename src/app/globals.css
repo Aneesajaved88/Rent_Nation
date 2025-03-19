@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* flex-direction: column; */
+}
+
+body {
+  background-color: black;
+  /* background-color: #979696; */
+  width: "100%";
+  overflow-x: hidden;
+  /* display: flex;
+  justify-content: start;
+  align-items: flex-start; */
+  font-family: Nunito;
+}
+
+.nav {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+  /* Border se thoda gap */
+}
+
+.nav::after {
+  content: "";
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  width: 0;
+  /* Default hidden */
+  height: 2px;
+  background-color: #FFAE1B;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav.active::after {
+  width: 30px;
+  /* ✅ Border width ko sirf 30px tak limit karega */
+}
+
+/* class="slick-dots slick-thumb" */
+.slick-dots.slick-thumb ul {
+  width: "500px";
+  display: flex;
+}
+
+.slick-dots {
+  bottom: -66px !important;
+}
+
+.slick-dots.slick-thumb li {
+  width: 80px !important;
+  padding: 10px !important;
+  /* 👈 Padding increase */
+}
+
+.slick-dots.slick-thumb li a {
+  width: 100px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  /* Optional */
+}
+
+.slick-prev {
+  left: 15px !important;
+  /* background-color: #222221 !important; */
+}
+
+.slick-next {
+  right: 15px !important;
+}
+
+.slider-container {
+  width: 750px;
+  border-radius: 10px;
+  height: auto;
+  background-color: #222221;
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .slider-container {
+    width: 500px;
+  }
+
+  .slider-container img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .slick-dots.slick-thumb ul {
+    width: "300px";
+    display: flex;
+  }
+
+  .slick-dots {
+    bottom: -80px !important;
+  }
+
+  .slick-dots.slick-thumb li {
+    width: 70px !important;
+    padding: 10px !important;
+    /* 👈 Padding increase */
+  }
+
+  .slick-dots.slick-thumb li a {
+    width: 70px !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    /* Optional */
+  }
+
+  .slick-prev {
+    left: 5px !important;
+    /* background-color: #222221 !important; */
+  }
+
+  .slick-next {
+    right: 1px !important;
+  }
+
+  .css-r7f01e-MuiDateCalendar-root {
+    width: 270px !important;
+  }
+}
+
+@media (min-width: 0) and (max-width: 600px) {
+  .slider-container {
+    width: 300px;
+  }
+
+  .slider-container img {
+    width: 250px;
+    height: 300px;
+  }
+
+  .slick-dots.slick-thumb ul {
+    width: "200px";
+  }
+
+  .slick-dots {
+    bottom: -150px !important;
+  }
+
+  .slick-dots.slick-thumb li {
+    width: 70px !important;
+    padding: 10px !important;
+    /* 👈 Padding increase */
+  }
+
+  .slick-dots.slick-thumb li a {
+    width: 70px !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    /* Optional */
+  }
+
+  .slick-prev {
+    left: 5px !important;
+    /* background-color: #222221 !important; */
+  }
+
+  .slick-next {
+    right: 1px !important;
+  }
+
+  .css-r7f01e-MuiDateCalendar-root {
+    width: 270px !important;
+  }
+}
