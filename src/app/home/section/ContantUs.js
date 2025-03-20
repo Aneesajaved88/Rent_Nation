@@ -1,3 +1,4 @@
+"use client";
 import { Box, Typography, IconButton, Divider, Button } from "@mui/material";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";

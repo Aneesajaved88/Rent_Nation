@@ -1,3 +1,4 @@
+"use client";
 import { Footer } from "@/_components/Footer";
 import Navbar from "@/_components/Navbar";
 import { useState } from "react";
@@ -26,20 +27,14 @@ const PreviewListing = () => {
   const settings = {
     customPaging: function (i) {
       return (
-        <a
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "10px",
-          }}>
+        <a sx={{}}>
           <img
             src={images[i]}
             alt={`Thumbnail ${i + 1}`}
             style={{
               width: "100px",
               height: "50px",
-              objectFit: "cover",
+              objectFit: "contain",
               borderRadius: "5px",
             }}
           />
@@ -55,7 +50,7 @@ const PreviewListing = () => {
   };
   return (
     <>
-      {/* {isopen && (
+      {isopen && (
         <Box
           sx={{
             display: { xs: "block", sm: "none" },
@@ -66,7 +61,7 @@ const PreviewListing = () => {
             position: "absolute",
             zIndex: 4,
           }}></Box>
-      )} */}
+      )}
       <Box
         sx={{
           width: "100%",
@@ -78,42 +73,50 @@ const PreviewListing = () => {
         <Box
           sx={{
             width: "100vw",
+            maxWidth: "1400px",
             height: "auto",
-            padding: "30px",
+            padding: { xs: "10px", md: "30px" },
             // bgcolor: "#ccc",
           }}>
           <Box
             sx={{
-              width: { xs: "320px", md: "100%" },
+              width: { xs: "100%", md: "100%" },
               height: "auto",
               display: "flex",
-              justifyContent: { lg: "space-around" },
-              alignItems: "flex-start",
+              justifyContent: { xs: "center", md: "space-around" },
+              alignItems: { xs: "center", md: "flex-start" },
               flexDirection: { xs: "column", md: "row" },
             }}>
             {/* ==========text  image--------------------------------------------------------------------------------------------------------------------------------------------*/}
             <Box
               sx={{
-                width: { xs: "320px", lg: "730px" },
+                width: { xs: "300px", sm: "600px", md: "540px", lg: "756px" },
 
                 display: "flex",
-                justifyContent: { md: "space-around", lg: "space-around" },
+                justifyContent: {
+                  xs: "center",
+                  md: "space-evenly",
+                  lg: "space-around",
+                },
                 flexDirection: { xs: "column", md: "column" },
-                alignItems: "flex-start",
+                alignItems: { xs: "center", md: "flex-start" },
                 // gap: { md: "20px" },
               }}>
               {/* ===================== image */}
               <Box
                 sx={{
-                  width: { md: "500px", lg: "758px" },
-                  height: { md: "450px", lg: "450px" },
-
-                  // bgcolor: "#582828",
+                  width: { xs: "300px", sm: "500px", md: "500px", lg: "758px" },
+                  height: {
+                    xs: "370px",
+                    sm: "430px",
+                    md: "450px",
+                    lg: "450px",
+                  },
                 }}>
                 <div className="slider-container">
                   <Slider {...settings}>
                     {images.map((src, index) => (
-                      <div key={index}>
+                      <div key={index} className="slider-image">
                         <img
                           src={src}
                           alt={`Slide ${index + 1}`}
@@ -131,19 +134,20 @@ const PreviewListing = () => {
               </Box>
               <Box
                 sx={{
-                  // width: "100%",
+                  width: "100%",
                   height: "auto",
                   display: "flex",
-                  justifyContent: { md: "space-between" },
                   flexDirection: { xs: "column" },
-                  alignItems: "flex-start",
+                  justifyContent: { xs: "center", md: "space-between" },
+                  alignItems: { xs: "center", md: "flex-start" },
                   gap: { xs: "20px" },
+                  // mt: { xs: 21, sm: 21 },
                 }}>
                 <Typography
                   sx={{
                     letterSpacing: "1px",
                     fontFamily: "Nunito",
-                    fontSize: { md: "24px" },
+                    fontSize: { xs: "18px", sm: "20px", md: "24px" },
                     fontWeight: "700",
                     lineHeight: "100%",
                     verticalAlign: "middle",
@@ -155,10 +159,10 @@ const PreviewListing = () => {
                     // width: "500px",
                     height: "auto",
                     display: "flex",
-                    justifyContent: { md: "space-between" },
+                    justifyContent: { xs: "space-evenly", md: "space-between" },
                     // flexDirection: { md: "column" },
-                    alignItems: "flex-start",
-                    gap: "20px",
+                    alignItems: { xs: "center", md: "flex-start" },
+                    gap: { xs: "14px", md: "20px" },
                   }}>
                   <IconButton sx={{ padding: 0 }}>
                     <LocationOnOutlinedIcon
@@ -170,7 +174,7 @@ const PreviewListing = () => {
                   <Typography
                     sx={{
                       fontFamily: "Nunito",
-                      fontSize: { md: "16px" },
+                      fontSize: { xs: "12px", sm: "14px", md: "16px" },
                       fontWeight: "400",
                       lineHeight: "100%",
                       verticalAlign: "middle",
@@ -180,7 +184,7 @@ const PreviewListing = () => {
                   <Typography
                     sx={{
                       fontFamily: "Nunito",
-                      fontSize: { md: "16px" },
+                      fontSize: { xs: "12px", sm: "14px", md: "16px" },
                       fontWeight: "100",
                       lineHeight: "100%",
                       verticalAlign: "middle",
@@ -195,9 +199,9 @@ const PreviewListing = () => {
                   // width: "800px",
                   height: "auto",
                   display: "flex",
-                  justifyContent: { md: "space-around" },
+                  justifyContent: { xs: "center", md: "space-around" },
                   // flexDirection: { md: "column" },
-                  alignItems: "flex-start",
+                  alignItems: { xs: "center", md: "flex-start" },
                 }}>
                 <TabsLink />
               </Box>

@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
@@ -43,11 +44,18 @@ const TabsLink = () => {
   };
 
   return (
-    <Box sx={{ width: { xs: "300px", md: "755px" } }}>
+    <Box
+      sx={{
+        width: { xs: "300px", sm: "590px", md: "500px", lg: "755px" },
+        display: { xs: "flex", md: "block", lg: "block" },
+        flexDirection: "column",
+        justifyContent: { xs: "center", md: "flex-start" },
+        alignItems: { xs: "center", md: "flex-start" },
+      }}>
       <Box
         sx={{
           borderBottom: 1,
-          width: "400px",
+          width: { xs: "300px", lg: "400px" },
           borderColor: "#fff",
           color: "#fff",
         }}>
@@ -92,12 +100,14 @@ const TabsLink = () => {
         <Typography
           sx={{
             fontFamily: "Nunito",
-            fontSize: { md: "14px" },
+            fontSize: { xs: "12px", sm: "14px" },
+            textAlign: { xs: "justify", sm: "left" },
             fontWeight: "400",
             lineHeight: "19px",
             letterSpacing: "0%",
             padding: "20px 0",
             verticalAlign: "middle",
+            color: "#ccc",
           }}>
           The beach is a stunning natural landscape where the land gently meets
           the vast expanse of the sea. It is a place of serene beauty, offering

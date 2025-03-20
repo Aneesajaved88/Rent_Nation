@@ -1,19 +1,25 @@
+"use client";
 
 import { Box, IconButton, Button, Typography } from "@mui/material";
-import Image from "next/image";
 
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
+import Image from "next/image";
 import C1Img1 from "@/_assets/pngs/Rectangle 22928.png";
 import C1Img2 from "@/_assets/pngs/Rectangle 22928 (1).png";
 import C1Img3 from "@/_assets/pngs/Rectangle 22928 (2).png";
 import C1Img4 from "@/_assets/pngs/Rectangle 22928.png";
+// import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export const Card1 = () => {
-  // console.log(Rectangle1);
+  const Router = useRouter();
+  const handleClick = () => {
+    Router.push("/listingPreview");
+  };
 
   const CardsData = [
     {
@@ -241,6 +247,7 @@ export const Card1 = () => {
                       <Button
                         variant="outlined"
                         color=" #FFAE1B"
+                        onClick={handleClick}
                         sx={{
                           padding: "10px",
                           fontSize: "14px",

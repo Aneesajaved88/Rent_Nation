@@ -73,11 +73,13 @@ body {
 
 .slick-prev {
   left: 15px !important;
+  z-index: 12;
   /* background-color: #222221 !important; */
 }
 
 .slick-next {
   right: 15px !important;
+  z-index: 12;
 }
 
 .slider-container {
@@ -90,11 +92,78 @@ body {
 @media (min-width: 900px) and (max-width: 1200px) {
   .slider-container {
     width: 500px;
+    justify-content: center;
+  }
+
+  .slider-image {
+    display: flex !important;
+    justify-content: center;
   }
 
   .slider-container img {
-    width: 300px;
-    height: 200px;
+    width: 350px !important;
+    text-align: center;
+    /* height: 200px !important; */
+  }
+
+  .slider-image {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .slick-dots.slick-thumb ul {
+    width: "300px";
+    display: flex;
+  }
+
+  .slick-dots {
+    bottom: -80px !important;
+  }
+
+  .slick-dots.slick-thumb li {
+    width: 70px !important;
+    padding: 10px !important;
+    /* 👈 Padding increase */
+  }
+
+  .slick-dots.slick-thumb li a {
+    width: 70px !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    /* Optional */
+  }
+
+  .slick-prev {
+    left: 5px !important;
+    /* background-color: #222221 !important; */
+  }
+
+  .slick-next {
+    right: 1px !important;
+  }
+
+  .css-r7f01e-MuiDateCalendar-root {
+    width: 270px !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .slider-container {
+    width: 500px;
+    justify-content: center;
+  }
+
+  .slider-image {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .slider-container img {
+    width: 350px !important;
+    text-align: center;
+    /* height: 200px !important; */
   }
 
   .slick-dots.slick-thumb ul {
@@ -138,15 +207,24 @@ body {
 @media (min-width: 0) and (max-width: 600px) {
   .slider-container {
     width: 300px;
+    /* display: flex; */
+    justify-content: center;
+    /* height: 200px; */
+  }
+
+  .slider-image {
+    display: flex !important;
+    justify-content: center;
   }
 
   .slider-container img {
-    width: 250px;
-    height: 300px;
+    width: 200px !important;
+    text-align: center;
+    /* height: 200px !important; */
   }
 
   .slick-dots.slick-thumb ul {
-    width: "200px";
+    width: "300px ";
   }
 
   .slick-dots {
@@ -154,22 +232,18 @@ body {
   }
 
   .slick-dots.slick-thumb li {
-    width: 70px !important;
-    padding: 10px !important;
-    /* 👈 Padding increase */
+    width: 80px !important;
+    /* padding: 10px !important; */
   }
 
   .slick-dots.slick-thumb li a {
     width: 70px !important;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 5px;
-    /* Optional */
+    /* object-fit: cover; */
   }
 
   .slick-prev {
     left: 5px !important;
+    z-index: 122;
     /* background-color: #222221 !important; */
   }
 

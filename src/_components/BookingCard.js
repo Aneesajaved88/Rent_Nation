@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { Box, Card, Typography, IconButton, Button } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -17,7 +18,7 @@ const BookingCard = () => {
   return (
     <Card
       sx={{
-        width: { md: 300, lg: 400 },
+        width: { xs: "300px", sm: "400px", md: 300, lg: 400 },
         backgroundColor: "#1E1E1E",
         color: "#fff",
         borderRadius: 3,

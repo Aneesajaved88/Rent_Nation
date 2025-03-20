@@ -1,3 +1,4 @@
+"use client";
 import { Box, IconButton, Typography } from "@mui/material";
 import BeachesImg1 from "@/_assets/pngs/image.png";
 import BeachesImg2 from "@/_assets/pngs/Rectangle 22939 (3).png";

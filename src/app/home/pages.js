@@ -43,7 +43,7 @@ const HomePage = () => {
           // height: "604px",
           // margin: "0 auto",
 
-          // backgroundImage: `url(./pngs/10631d4b3c9028b02ba56071be2727fd.png)`,
+          backgroundImage: `url(./pngs/10631d4b3c9028b02ba56071be2727fd.png)`,
           backgroundSize: "cover",
           backgroundPosition: "100%",
           backgroundRepeat: "no-repeat",
@@ -67,14 +67,14 @@ const HomePage = () => {
 
               // flexDirection: "column",
             }}>
-            <PreviewListing />
-            {/* <Navbar setIsopen={setIsopen} isOpen={isOpen} />
+            {/* <PreviewListing /> */}
+            <Navbar setIsopen={setIsopen} isOpen={isOpen} />
             <HeroSection />
             <Cards />
             <Beaches />
-            <ContantUs /> */}
+            <ContantUs />
 
-            {/* <Footer /> */}
+            <Footer />
           </Box>
         </Box>
       </Box>

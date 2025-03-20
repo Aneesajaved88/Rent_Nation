@@ -1,3 +1,5 @@
+
+"use client";
 import { Box } from "@mui/material";
 import { Card2 } from "./_cards/Card2";
 import { Card3 } from "./_cards/Card3";

@@ -1,3 +1,4 @@
+"use client";
 import { Box, IconButton, Typography } from "@mui/material";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
@@ -179,9 +180,10 @@ export const Footer = () => {
             <Typography
               sx={{
                 color: "#F18805",
-                fontSize: { xs: "12px", sm: "16", lg: "18px" },
+                fontSize: { xs: "12px", sm: "16px", lg: "15px" },
                 fontWeight: "700",
                 textTransform: "uppercase",
+                fontFamily: "Nunito",
               }}>
               Social Media
             </Typography>
